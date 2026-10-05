@@ -1,0 +1,52 @@
+:root{--g9:#10401f;--g7:#1f6b36;--g5:#3a9a55;--g2:#dcefdc;--g1:#f1f8f0;--ink:#1c2a20;--mut:#55665a;--w:#fff}
+@media(prefers-color-scheme:dark){:root[data-x]{}}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:90px;scroll-behavior:smooth}
+body{font:17px/1.7 "Nunito Sans",system-ui,sans-serif;color:var(--ink);background:var(--w)}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--g9);line-height:1.2;font-weight:600}
+h1{font-size:clamp(2.2rem,5vw,3.6rem)}h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:.6em}h3{font-size:1.25rem;margin-bottom:.3em}
+p{margin-bottom:1em;max-width:68ch}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--g7)}
+:focus-visible{outline:3px solid var(--g5);outline-offset:3px}
+header{position:sticky;top:0;z-index:9;background:rgba(255,255,255,.96);border-bottom:1px solid var(--g2);backdrop-filter:blur(6px)}
+.bar{max-width:1120px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-family:Fraunces,Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--g9);text-decoration:none}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 14px;border-radius:99px;text-decoration:none;color:var(--g9);font-weight:600;font-size:.95rem}
+nav a:hover{background:var(--g2)}
+.btn{display:inline-block;background:var(--g7);color:var(--w);padding:14px 28px;border-radius:99px;font-weight:700;text-decoration:none;border:2px solid var(--g7);transition:background .2s}
+.btn:hover{background:var(--g9);border-color:var(--g9)}
+.btn.alt{background:transparent;color:var(--g7)}.btn.alt:hover{background:var(--g2);color:var(--g9)}
+.btn.sm{padding:9px 20px;font-size:.92rem}
+.page{display:none}.page:target,body:not(:has(.page:target)) #home{display:block}
+.wrap{max-width:1120px;margin:auto;padding:64px 20px}
+.hero{background:linear-gradient(180deg,var(--g1),var(--w))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero p.lead{font-size:1.2rem;color:var(--mut)}
+.row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.hero img{border-radius:24px;background:var(--w);box-shadow:0 20px 50px rgba(16,64,31,.15)}
+.band{background:var(--g1)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:26px}
+.band .card{border-color:transparent}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.split img{border-radius:20px}
+.cta{background:var(--g9);color:var(--w);text-align:center}
+.cta h2{color:var(--w)}.cta p{margin:0 auto 1.4em;color:#d6ecd8}
+.cta .btn{background:var(--w);color:var(--g9);border-color:var(--w)}
+.cta .btn:hover{background:var(--g2)}
+ul.tick{list-style:none;padding:0}ul.tick li{padding-left:30px;position:relative;margin-bottom:.6em}
+ul.tick li:before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:3px solid var(--g5);border-bottom:3px solid var(--g5);transform:rotate(-45deg)}
+.steps{counter-reset:s;display:grid;gap:18px}
+.steps .card{display:grid;grid-template-columns:48px 1fr;gap:18px}
+.steps .card:before{counter-increment:s;content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--g7);color:var(--w);display:grid;place-items:center;font-weight:700}
+details{border:1px solid var(--g2);border-radius:14px;padding:16px 20px;margin-bottom:12px;background:var(--w)}
+summary{cursor:pointer;font-weight:700;color:var(--g9)}
+details[open]{background:var(--g1)}details p{margin:.8em 0 0}
+.note{font-size:.85rem;color:var(--mut);border-top:1px solid var(--g2);padding-top:18px;margin-top:30px}
+.sub{background:var(--g1)}.sub .wrap{padding:48px 20px}
+footer{background:var(--g9);color:#cfe6d2;font-size:.9rem}
+footer .wrap{padding:40px 20px}footer a{color:#fff}footer p{max-width:none}
+@media(max-width:800px){.hero .wrap,.split{grid-template-columns:1fr}.hero img{order:-1;max-width:340px;margin:auto}.wrap{padding:44px 18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
